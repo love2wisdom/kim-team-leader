@@ -36,8 +36,8 @@ yarn-error.log*
 # API keys and secrets
 /keys/
 
-# Claude settings (local)
-.claude/settings.local.json
+# Claude settings and commands
+.claude/
 
 # vercel
 .vercel
