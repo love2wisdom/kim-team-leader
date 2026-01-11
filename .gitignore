@@ -1,97 +1,49 @@
-# ============================================
-# 김팀장 프로젝트 .gitignore
-# ============================================
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-# ===========================================
-# 환경변수 (민감 정보)
-# ===========================================
-.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-.env*.local
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
 
-# ===========================================
-# Google Cloud 서비스 계정 키
-# ===========================================
-keys/
-*.json
-!package.json
-!package-lock.json
-!tsconfig.json
-!*.config.json
-gcp-*.json
-*-service-account.json
-*-credentials.json
+# testing
+/coverage
 
-# ===========================================
-# Dependencies
-# ===========================================
-node_modules/
-.pnp/
-.pnp.js
+# next.js
+/.next/
+/out/
 
-# ===========================================
-# Build & Output
-# ===========================================
-.next/
-out/
-build/
-dist/
+# production
+/build
 
-# ===========================================
-# Testing
-# ===========================================
-coverage/
-.nyc_output/
+# misc
+.DS_Store
+*.pem
 
-# ===========================================
-# Debug
-# ===========================================
+# debug
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-# ===========================================
-# IDE & Editor
-# ===========================================
-.idea/
-.vscode/
-*.swp
-*.swo
-*~
-.DS_Store
-Thumbs.db
+# env files (can opt-in for committing if needed)
+.env*
 
-# ===========================================
-# Misc
-# ===========================================
-*.log
-*.pid
-*.seed
-*.pid.lock
+# API keys and secrets
+/keys/
 
-# ===========================================
-# Vercel
-# ===========================================
+# Claude settings (local)
+.claude/settings.local.json
+
+# vercel
 .vercel
 
-# ===========================================
-# TypeScript
-# ===========================================
+# typescript
 *.tsbuildinfo
 next-env.d.ts
 
-# ===========================================
-# Prisma
-# ===========================================
-prisma/migrations/**/migration_lock.toml
-
-# ===========================================
-# 업로드 파일 (로컬 테스트용)
-# ===========================================
-uploads/
-tmp/
-temp/
+/src/generated/prisma
